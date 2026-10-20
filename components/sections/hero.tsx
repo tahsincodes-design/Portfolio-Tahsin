@@ -1,6 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowDownRight, ArrowUpRight, Download, Mail, MapPin } from "lucide-react"
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  Download,
+  Mail,
+  MapPin,
+} from "lucide-react"
 
 import { SocialIcon } from "@/components/site/social-icon"
 import { buttonVariants } from "@/components/ui/button"
@@ -127,7 +133,7 @@ export function Hero() {
                   )}
                 >
                   <Download className="size-4" />
-                  Résumé
+                  CV
                 </a>
               ) : null}
             </div>

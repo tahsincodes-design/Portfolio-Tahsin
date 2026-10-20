@@ -31,10 +31,11 @@ Copy `.env.example` to `.env.local` and fill in:
 
 ## Content
 
-- **`lib/site.ts`** — name, role, description, email, phone, location, availability, social links, navigation, stack, principles, tech logo metadata, and education entries. The résumé button stays hidden until `resumeUrl` is set (for example, `/resume.pdf` placed in `public/`).
+- **`lib/site.ts`** — name, role, description, email, phone, location, availability, social links, navigation, stack, principles, tech logo metadata, and education entries. The résumé links point to `public/Tahsin_Ahmed_Developer_CV.docx`.
 - **`lib/projects.ts`** — all project content: case study copy, roles, stacks, live/repository links, and image metadata.
 - **`public/images/`** — optimized source images used by `next/image`:
   - `profile/tahsin-ahmed.png`
+  - `brand/tahsin-mark.png`
   - `projects/*/cover.png`
   - `education/ulab.png`, `education/fbic.jpg`, `education/programming-hero.jpg`
   - `tech/*` (React, Next.js, Tailwind CSS, MongoDB, HeroUI, GitHub, LinkedIn)

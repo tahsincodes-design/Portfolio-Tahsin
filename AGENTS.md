@@ -41,6 +41,7 @@ Personal portfolio for Tahsin Ahmed: Next.js 16.4 App Router, React 19.3, TypeSc
 - `/projects/[slug]` uses `generateStaticParams` and `dynamicParams = false`; add new projects to `lib/projects.ts` or they will 404.
 - Project cards use `object-contain` over a light panel so screenshots stay legible. Keep `next/image` dimensions in `lib/projects.ts` in sync with replacement images.
 - Brand logos are placed on white tiles so black/white marks (Next.js, HeroUI, GitHub) stay visible in both themes. The tech logo rail is driven by `techLogos` in `lib/site.ts`.
+- The header and footer use the cropped `public/images/brand/tahsin-mark.png` logo tile from `components/site/brand-mark.tsx`. The résumé file lives at `public/Tahsin_Ahmed_Developer_CV.docx`.
 - Education cards are driven by the `education` array in `lib/site.ts`; each entry includes logo metadata and a `tone` (`aqua`, `violet`, or `gold`).
 - Contact form failures are intentional when Resend env vars are missing (503 with a direct-email fallback). The rate limiter is in-memory and per instance.
 - Git default branch is `master`; there are no pre-commit hooks or deployment configs in the repo.

@@ -14,6 +14,7 @@ export function BrandMark({ className }: { className?: string }) {
         src="/images/brand/tahsin-mark.png"
         alt=""
         fill
+        loading="eager"
         sizes="64px"
         className="object-contain"
       />

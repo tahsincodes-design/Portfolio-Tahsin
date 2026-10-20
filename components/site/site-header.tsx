@@ -92,7 +92,7 @@ export function SiteHeader() {
               )}
             >
               <Download className="size-3.5" />
-              Résumé
+              CV
             </a>
           ) : null}
           <Link
@@ -174,6 +174,7 @@ export function SiteHeader() {
               <a
                 href={siteConfig.resumeUrl}
                 download
+                onClick={() => setOpen(false)}
                 className={cn(
                   buttonVariants({ size: "lg", variant: "outline" }),
                   "mt-8 h-11 w-full rounded-full"
@@ -184,19 +185,6 @@ export function SiteHeader() {
               </a>
             ) : null}
 
-            {siteConfig.resumeUrl ? (
-              <a
-                href={siteConfig.resumeUrl}
-                download
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                  "mt-8 h-11 w-full rounded-full"
-                )}
-              >
-                Download résumé
-                <Download className="size-4" />
-              </a>
-            ) : null}
             <Link
               href="/#contact"
               onClick={() => setOpen(false)}

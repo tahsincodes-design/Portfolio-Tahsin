@@ -56,7 +56,6 @@ function EducationCard({
           src={item.logo.src}
           alt={item.logo.alt}
           fill
-          quality={90}
           sizes={featured ? "240px" : "64px"}
           className={cn("object-contain", !featured && "p-1")}
         />
