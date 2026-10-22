@@ -10,7 +10,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # portfolio-tahsin
 
-Personal portfolio for Tahsin Ahmed: Next.js 16.4 App Router, React 19.3, TypeScript strict, Tailwind CSS v4, shadcn/ui. The site has a home page, `/projects`, and three statically generated case studies (Bazardor, Bangla Khobor, Book Vibe). Contact submissions go through `/api/contact` and Resend; there is no database.
+Personal portfolio for Tahsin Ahmed: Next.js 16.4 App Router, React 19.3, TypeScript strict, Tailwind CSS v4, shadcn/ui. The site has a home page, `/projects`, and three statically generated case studies (Bangla News 24, Bazardor, Book Vibe). Contact submissions go through `/api/contact` and Resend; there is no database.
 
 ## Commands
 

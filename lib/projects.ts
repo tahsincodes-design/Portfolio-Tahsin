@@ -44,6 +44,77 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "bangla-khobor",
+    title: "Bangla News 24",
+    tagline:
+      "A Bangla-first news portal with accounts, search, and a calm read.",
+    summary:
+      "A full-stack Bangla news portal with a live headline ticker, category desks, full-text search, a most-read rail, and Better Auth accounts — built around Bengali typography instead of translated layouts.",
+    year: "2026",
+    role: "Full-stack developer",
+    category: "Content",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "Better Auth"],
+    links: {
+      live: "https://bangla-khobor-24.vercel.app/",
+      repo: "https://github.com/tahsincodes-design/bangla-khobor-24",
+    },
+    image: {
+      src: "/images/projects/bangla-khobor/cover.png",
+      alt: "Bangla News 24 homepage with headline ticker, lead story, latest news, and most-read sidebar",
+      width: 1917,
+      height: 869,
+    },
+    visual: "news",
+    problem:
+      "Bangla readers want the day's news quickly, but most portals greet them with popups, cramped headlines, and sidebars that compete with the story. Bangla News 24's goal was a full newsroom — breaking headlines, category desks, search, saved accounts — that still feels calm and readable on a phone.",
+    constraints: [
+      "Bangla typography and long headlines",
+      "A dense front page with several content zones",
+      "Authentication and session management to keep secure",
+      "Low-bandwidth mobile connections",
+      "An upstream news API that can be unavailable",
+    ],
+    build: [
+      "A breaking-news ticker above a sticky, responsive header with search.",
+      "Category desks for national, politics, international, economy, sports, entertainment, and technology.",
+      "A lead story with a latest-news rail and a most-read sidebar with view counts.",
+      "Dynamic category listings with pagination and article pages with reading progress, share tools, and related news.",
+      "Full-text search plus static about, contact, privacy, and terms pages.",
+      "Email/password and Google/GitHub sign-in with profile, password, and per-device session management.",
+      "Sitemap, robots, article JSON-LD, custom 404, error boundary, and skeleton loading states.",
+      "Bundled Bengali fixtures that keep every route working when the upstream news API is unavailable.",
+    ],
+    decisions: [
+      {
+        title: "Paper, ink, and crimson",
+        body: "The palette uses warm paper surfaces, deep ink text, and crimson accents so the interface feels like an editorial product rather than a generic dashboard. Bengali display type carries the brand and keeps long headlines legible.",
+      },
+      {
+        title: "One lead story, then density",
+        body: "The front page opens with a single large story, then relaxes into compact latest and most-read rails. That gives readers a clear entry point without hiding the breadth of the newsroom.",
+      },
+      {
+        title: "Auth built into the product",
+        body: "Better Auth powers email, Google, and GitHub sign-in, profile updates, password changes, and device-level session revocation. Accounts belong to the reading experience instead of feeling pinned on afterwards.",
+      },
+      {
+        title: "Fixtures keep the newsroom open",
+        body: "News APIs fail. Bundled Bengali fixtures mean the homepage, category pages, search, and article routes still render a complete experience, so a third-party outage never turns into a blank page.",
+      },
+    ],
+    challenge: {
+      title: "Keeping a dense newsroom calm",
+      body: "A full portal has a ticker, navigation, a lead story, a latest rail, category desks, a most-read list, and account chrome. A strict grid, consistent image ratios, and a limited type scale keep all of that scannable while article pages stay comfortable to read.",
+    },
+    outcomes: [
+      { label: "Sections", value: "7 category desks" },
+      { label: "Accounts", value: "Email + Google + GitHub" },
+      { label: "Stack", value: "Next.js 16 + Better Auth" },
+    ],
+    lesson:
+      "A news product earns trust through hierarchy and consistency. When every zone has one clear job, readers can move from urgency to depth without the page getting in the way.",
+  },
+  {
     slug: "bazardor",
     title: "Bazardor",
     tagline: "A daily market price tracker for the essentials.",
@@ -104,75 +175,6 @@ export const projects: Project[] = [
     ],
     lesson:
       "When the data is the product, hierarchy matters more than decoration. The fastest interface is the one that shows the right number first.",
-  },
-  {
-    slug: "bangla-khobor",
-    title: "Bangla Khobor",
-    tagline: "A Bangla-first news reader built for fast headline scanning.",
-    summary:
-      "A full-stack Bangla news platform with category navigation, a breaking-news ticker, a lead story, and a readable article layout.",
-    year: "2026",
-    role: "Full-stack developer",
-    category: "Content",
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "MongoDB",
-      "HeroUI",
-      "DaisyUI",
-      "Tailwind CSS",
-    ],
-    links: {
-      live: "https://bangla-khobor-24.vercel.app/",
-      repo: "https://github.com/tahsincodes-design/bangla-khobor-24",
-    },
-    image: {
-      src: "/images/projects/bangla-khobor/cover.png",
-      alt: "Bangla Khobor news homepage with lead story and category navigation",
-      width: 1917,
-      height: 866,
-    },
-    visual: "news",
-    problem:
-      "Bangla readers need fast, readable news without popups and cluttered sidebars. The goal was a calm front page that still surfaces breaking stories, multiple categories, and the most important headlines at a glance.",
-    constraints: [
-      "Bangla typography and long headlines",
-      "Dense front page with several content zones",
-      "Dynamic article routes",
-      "Readable on low-bandwidth mobile connections",
-    ],
-    build: [
-      "A breaking-news ticker above the main navigation.",
-      "Category navigation for politics, world, economy, health, sports, technology, and entertainment.",
-      "A lead story with a supporting headline column and a most-read sidebar.",
-      "Dynamic article pages with a comfortable Bangla reading measure.",
-      "MongoDB-backed content and a responsive news grid.",
-    ],
-    decisions: [
-      {
-        title: "One lead story, then density",
-        body: "The front page needs a clear entry point. A single lead story with a large image anchors the page, while the supporting headlines stay compact enough to scan.",
-      },
-      {
-        title: "A Bangla-specific type scale",
-        body: "Bangla headlines need more vertical room than Latin text. Tuning line height and weight for the script made the page feel deliberate instead of cramped.",
-      },
-      {
-        title: "Ticker plus categories",
-        body: "Breaking news and evergreen categories are different intents. Keeping the ticker visually separate from the category row lets readers choose between urgency and browsing.",
-      },
-    ],
-    challenge: {
-      title: "Balancing a dense front page with reading comfort",
-      body: "News homepages carry a lot of information. Using a strict grid, consistent image ratios, and a limited type scale kept the page scannable while preserving a comfortable reading experience on article pages.",
-    },
-    outcomes: [
-      { label: "Categories", value: "8 news sections" },
-      { label: "Layout", value: "Lead story + sidebar" },
-      { label: "Stack", value: "Full-stack Next.js" },
-    ],
-    lesson:
-      "A news homepage is a hierarchy problem. Readers should never have to guess what matters most.",
   },
   {
     slug: "book-vibe",

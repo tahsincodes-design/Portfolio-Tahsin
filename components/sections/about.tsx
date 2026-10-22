@@ -36,12 +36,13 @@ export function About() {
                 with React, Next.js, TypeScript, Node.js, and MongoDB.
               </p>
               <p>
-                I&apos;ve shipped a daily market price tracker, a Bangla news
-                platform, and a book discovery experience. My favourite projects
-                are the ones where the constraints are real — limited time,
-                imperfect data, and a clear user who needs something to work. I
-                care about readable code, accessible defaults, and interfaces
-                that explain themselves without a tutorial.
+                I&apos;ve shipped a full-stack Bangla news portal, a daily
+                market price tracker, and a book discovery experience. My
+                favourite projects are the ones where the constraints are real —
+                limited time, imperfect data, and a clear user who needs
+                something to work. I care about readable code, accessible
+                defaults, and interfaces that explain themselves without a
+                tutorial.
               </p>
             </div>
 
